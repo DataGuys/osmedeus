@@ -17,7 +17,7 @@ resource containerGroup 'Microsoft.ContainerInstance/containerGroups@2021-09-01'
           image: containerImage
           resources: {
             requests: {
-              cpu: 1.0
+              cpu: 1
               memoryInGB: 1.5
             }
           }
@@ -38,5 +38,6 @@ resource containerGroup 'Microsoft.ContainerInstance/containerGroups@2021-09-01'
         }
       ]
     }
+    restartPolicy: 'Always'
   }
 }
