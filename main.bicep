@@ -17,8 +17,8 @@ resource containerGroup 'Microsoft.ContainerInstance/containerGroups@2021-09-01'
           image: containerImage
           resources: {
             requests: {
-              cpu: 1
-              memoryInGB: 1.5
+              cpu: 2
+              memoryInGB: 2
             }
           }
           ports: [
