@@ -1,7 +1,7 @@
 // Parameters
 param location string = resourceGroup().location
 param containerGroupName string = 'osmedeus-aci'
-param containerImage string = 'mablanco/osmedeus:latest' // Replace with the desired Osmedeus Docker image
+param containerImage string = 'j3ssie/osmedeus:latest' // Corrected image
 param containerPort int = 8000
 
 // Container Group Resource (ACI)
@@ -17,7 +17,7 @@ resource containerGroup 'Microsoft.ContainerInstance/containerGroups@2021-09-01'
           image: containerImage
           resources: {
             requests: {
-              cpu: 2
+              cpu: 1
               memoryInGB: 2
             }
           }
@@ -26,6 +26,7 @@ resource containerGroup 'Microsoft.ContainerInstance/containerGroups@2021-09-01'
               port: containerPort
             }
           ]
+          command: ['osmedeus', 'server'] // Added command to start the server
         }
       }
     ]
