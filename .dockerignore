@@ -1,0 +1,11 @@
+// filepath: osmedeus-scanner/.dockerignore
+node_modules
+npm-debug.log
+Dockerfile
+.dockerignore
+README.md
+src/
+dist/
+.git
+.gitignore
+*.env

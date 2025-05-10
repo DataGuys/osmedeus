@@ -1,0 +1,30 @@
+{
+    "name": "osmedeus-scanner",
+    "version": "0.1.0",
+    "description": "Modular external scanner and pen testing tool",
+    "main": "dist/index.js",
+    "scripts": {
+      "build": "tsc",
+      "start": "node dist/index.js",
+      "dev": "ts-node src/index.ts",
+      "lint": "eslint . --ext .ts",
+      "test": "echo \"Error: no test specified yet\" && exit 1"
+    },
+    "keywords": [
+      "scanner",
+      "pentest",
+      "security",
+      "typescript"
+    ],
+    "author": "GitHub Copilot",
+    "license": "MIT",
+    "dependencies": {},
+    "devDependencies": {
+      "@types/node": "^20.12.12",
+      "eslint": "^8.57.0",
+      "ts-node": "^10.9.2",
+      "typescript": "^5.4.5",
+      "@typescript-eslint/eslint-plugin": "^7.9.0",
+      "@typescript-eslint/parser": "^7.9.0"
+    }
+  }
